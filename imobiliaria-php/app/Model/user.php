@@ -25,15 +25,17 @@ class User{
 
     }
     
-    /*
-    public function getAllUsers(){
+    
+    public function ShowAllUser(){
 
         $banco = Database::connect();
 
-        $sql = "SELECT id, nome, email, role * FROM users"
+        $sql = "SELECT id, nome, email, role * FROM users";
 
+        $stmt = $banco->prepare($sql);
 
-    }*/
+        echo "$stmt";
+    }
 }
 
 

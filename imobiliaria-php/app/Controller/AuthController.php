@@ -56,6 +56,24 @@ class AuthController{
 
 
     }
+
+
+    public function showAll(){
+
+        $userModel = new User();
+
+        try{
+            $pegar = $userModel->ShowAllUser();
+            http_response_code(200);
+
+            echo $pegar;
+            
+        }catch (PDOException $e){
+
+        }
+        
+
+    }   
 }
 
 ?>
